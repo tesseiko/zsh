@@ -104,7 +104,7 @@ bindkey -s '^o' 'lfcd\n'
 bindkey -s '^r' 'abd -t\n'
 bindkey -s '^a' 'bc -lq\n'
 
-bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
+bindkey -s '^f' 'fuzzywork\n'
 
 bindkey '^[[P' delete-char
 
