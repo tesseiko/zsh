@@ -106,6 +106,7 @@ bindkey -s '^r' 'abd -t\n'
 bindkey -s '^a' 'bc -lq\n'
 
 bindkey -s '^f' 'fuzzywork\n'
+bindkey -s '^_' 'echo $?\n'
 
 bindkey '^[[P' delete-char
 
