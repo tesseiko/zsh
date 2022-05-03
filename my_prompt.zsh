@@ -11,7 +11,12 @@ add-zsh-hook precmd vcs_info
 #
 # Beer prompt
 # PROMPT='%F{yellow}${vcs_info_msg_0_}%f🖥️ %F{blue}%1~%f%F{cyan}🐐%n%f🍺'
+
 PROMPT='%F{yellow}${vcs_info_msg_0_}%f%F{cyan}[%F{blue}%2~%f%F{cyan}]%f%(!.#.$) '
+
+# RPROMPT='%F{yellow}${vcs_info_msg_0_}%f'
+# PROMPT='%F{cyan}[%F{blue}%2~%f%F{cyan}]%f%(!.#.$) '
+
 # PROMPT="%{$fg_bold[green]%}%n@%m%{$reset_color%} %{$fg_bold[blue]%}%2~%{$reset_color%} ${vcs_info_msg_0_}%{$reset_color%}%B%b "
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
@@ -27,3 +32,5 @@ zstyle ':vcs_info:*' stagedstr '+'
 zstyle ':vcs_info:git:*' formats       '::%b%u%c'
 # zstyle ':vcs_info:git:*' actionformats '🎋%b|%a%u%c'
 zstyle ':vcs_info:git:*' actionformats '::%b|%a%u%c'
+
+
