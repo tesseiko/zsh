@@ -102,11 +102,18 @@ lfcd () {
 }
 bindkey -s '^o' 'lfcd\n'
 
-bindkey -s '^r' 'abd -t\n'
+# bindkey -s '^r' 'abd -t\n'
 bindkey -s '^a' 'bc -lq\n'
 
 bindkey -s '^f' 'fuzzywork\n'
+bindkey -s '^w' 'fuzzywork --workspace-switch\n'
+bindkey -s '^p' 'fuzzywork --open-pdf\n'
 bindkey -s '^_' 'echo $?\n'
+
+bindkey -sM vicmd '\\q' 'icd $(find . -type d -maxdepth  4 -print | fzf) \n'
+bindkey -sM vicmd '\\w' 'ifuzzywork\n'
+bindkey -sM vicmd '\\e' 'ifuzzywork --open-pdf\n'
+bindkey -sM vicmd '\\r' 'ifuzzywork --workspace-switch\n'
 
 bindkey '^[[P' delete-char
 
@@ -127,6 +134,7 @@ if [[ -n "${terminfo[kcuu1]}" ]]; then
   bindkey -M emacs "${terminfo[kcuu1]}" up-line-or-beginning-search
   bindkey -M viins "${terminfo[kcuu1]}" up-line-or-beginning-search
   bindkey -M vicmd "${terminfo[kcuu1]}" up-line-or-beginning-search
+  bindkey -M vicmd k up-line-or-beginning-search
 fi
 # Start typing + [Down-Arrow] - fuzzy find history backward
 if [[ -n "${terminfo[kcud1]}" ]]; then
@@ -136,6 +144,7 @@ if [[ -n "${terminfo[kcud1]}" ]]; then
   bindkey -M emacs "${terminfo[kcud1]}" down-line-or-beginning-search
   bindkey -M viins "${terminfo[kcud1]}" down-line-or-beginning-search
   bindkey -M vicmd "${terminfo[kcud1]}" down-line-or-beginning-search
+  bindkey -M vicmd j down-line-or-beginning-search
 fi
 
 # Load syntax highlighting; should be last.
