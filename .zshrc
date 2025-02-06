@@ -108,6 +108,7 @@ bindkey -s '^a' 'bc -lq\n'
 bindkey -s '^f' 'fuzzywork\n'
 bindkey -s '^w' 'fuzzywork --workspace-switch\n'
 bindkey -s '^p' 'fuzzywork --open-pdf\n'
+bindkey -s '^r'  'cd $(fzf --walker=dir) \n'
 bindkey -s '^_' 'echo $?\n'
 
 bindkey -sM vicmd '\\q' 'icd $(find . -type d -maxdepth  4 -print | fzf) \n'
