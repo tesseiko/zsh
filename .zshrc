@@ -71,6 +71,7 @@ export KEYTIMEOUT=1
 export LC_CTYPE=en_US.UTF-8
 
 source ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/completion.zsh
+source ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/docker_completion.zsh
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
