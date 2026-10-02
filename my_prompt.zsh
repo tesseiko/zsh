@@ -12,6 +12,7 @@ add-zsh-hook precmd vcs_info
 # Beer prompt
 # PROMPT='%F{yellow}${vcs_info_msg_0_}%f🖥️ %F{blue}%1~%f%F{cyan}🐐%n%f🍺'
 
+# 
 PROMPT='%F{yellow}${vcs_info_msg_0_}%f%F{cyan}[%F{blue}%2~%f%F{cyan}]%f%(!.#.$) '
 
 # RPROMPT='%F{yellow}${vcs_info_msg_0_}%f'
